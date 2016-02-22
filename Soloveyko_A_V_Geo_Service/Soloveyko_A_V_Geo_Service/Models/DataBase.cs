@@ -4,6 +4,7 @@ using System.Data.Entity;
 using System.Data.Entity.ModelConfiguration.Conventions;
 using System.Linq;
 using System.Web;
+using Microsoft.Ajax.Utilities;
 
 namespace Soloveyko_A_V_Geo_Service.Models
 {
@@ -35,5 +36,30 @@ namespace Soloveyko_A_V_Geo_Service.Models
 
         //Location obj
         public DbSet<Location> Locations { get; set; }
+    }
+
+    public class DataBaseContext
+    {
+        private static DataBaseContext dataBaseManager;
+        private static DataBase dataBase;
+        private static object syncFlag = new object();
+
+        private DataBaseContext()
+        {
+            dataBase = new DataBase();
+        }
+
+        public static DataBase GetDataBaseContext()
+        {
+            if (dataBase == null)
+            {
+                lock (syncFlag)
+                {
+                    if (dataBase == null)
+                        dataBaseManager = new DataBaseContext();
+                }
+            }
+            return dataBase;
+        }
     }
 }
