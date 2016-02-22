@@ -1,0 +1,50 @@
+﻿@{
+    ViewBag.Title = "About";
+}
+
+<hgroup class="title">
+    <h1>@ViewBag.Title.</h1>
+    <h2>@ViewBag.Message</h2>
+</hgroup>
+
+<article>
+    <p>
+        Use this area to provide additional information.
+    </p>
+
+    <p>
+        Use this area to provide additional information.
+    </p>
+
+    <p>
+        Use this area to provide additional information.
+    </p>
+</article>
+
+<aside>
+    <h3>Aside Title</h3>
+    <p>
+        Use this area to provide additional information.
+    </p>
+    <ul>
+        <li>@Html.ActionLink("Home", "Index", "Home")</li>
+        <li>@Html.ActionLink("About", "About", "Home")</li>
+        <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+        <style>
+            .bro {
+                color: blue;
+
+            }
+            .bro a {
+                color: red;
+            }
+            .bro a:hover {
+                color: green;
+                text-decoration: none;
+                background: white;
+                border-radius: 4px;
+            }
+        </style>
+        <div class="bro">Link to bro:@Html.ActionLink("Hello Brother","About")</div>
+    </ul>
+</aside>
