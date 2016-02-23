@@ -13,16 +13,9 @@ namespace Soloveyko_A_V_Geo_Service.Controllers
         {
             ViewBag.Message = "Modify this template to jump-start your ASP.NET MVC application.";
 
-            using (var db = new DataBase())
-            {
-                var address = new Address();
-                address.Country = "Belarus";
-                address.City = "Minsk";
-                address.Street = "Gashkevicha";
-                address.Building = "6/74";
-                db.Addresses.Add(address);
-                db.SaveChanges();
-            }
+            var db = DataBase.GetDbContext();
+            //db.SaveChanges();
+            
 
             return View();
         }

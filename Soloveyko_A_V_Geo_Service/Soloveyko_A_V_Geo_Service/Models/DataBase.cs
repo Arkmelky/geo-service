@@ -10,10 +10,28 @@ namespace Soloveyko_A_V_Geo_Service.Models
 {
     public class DataBase:DbContext
     {
-        public DataBase()
+        private static DataBase dataBase;
+        private static object flag = new object();
+
+        private DataBase()
             : base("GeoObjects_db")
         {
         
+        }
+
+        public static DataBase GetDbContext()
+        {
+            if (dataBase == null)
+            {
+                lock (flag)
+                {
+                    if (dataBase == null)
+                    {
+                        dataBase = new DataBase();
+                    }
+                }
+            }
+            return dataBase;
         }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
@@ -36,30 +54,5 @@ namespace Soloveyko_A_V_Geo_Service.Models
 
         //Location obj
         public DbSet<Location> Locations { get; set; }
-    }
-
-    public class DataBaseContext
-    {
-        private static DataBaseContext dataBaseManager;
-        private static DataBase dataBase;
-        private static object syncFlag = new object();
-
-        private DataBaseContext()
-        {
-            dataBase = new DataBase();
-        }
-
-        public static DataBase GetDataBaseContext()
-        {
-            if (dataBase == null)
-            {
-                lock (syncFlag)
-                {
-                    if (dataBase == null)
-                        dataBaseManager = new DataBaseContext();
-                }
-            }
-            return dataBase;
-        }
     }
 }
