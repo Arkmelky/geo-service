@@ -83,3 +83,5 @@ G:\OOP\Kursovoy\Soloveyko_A_V_Geo_Service\Soloveyko_A_V_Geo_Service\bin\zh-Hant\
 G:\OOP\Kursovoy\Soloveyko_A_V_Geo_Service\Soloveyko_A_V_Geo_Service\obj\Debug\Soloveyko_A_V_Geo_Service.csprojResolveAssemblyReference.cache
 G:\OOP\Kursovoy\Soloveyko_A_V_Geo_Service\Soloveyko_A_V_Geo_Service\obj\Debug\Soloveyko_A_V_Geo_Service.dll
 G:\OOP\Kursovoy\Soloveyko_A_V_Geo_Service\Soloveyko_A_V_Geo_Service\obj\Debug\Soloveyko_A_V_Geo_Service.pdb
+G:\OOP\Kursovoy\Soloveyko_A_V_Geo_Service\Soloveyko_A_V_Geo_Service\obj\Debug\Soloveyko_A_V_Geo_Service.Migrations.Geo_2.resources
+G:\OOP\Kursovoy\Soloveyko_A_V_Geo_Service\Soloveyko_A_V_Geo_Service\obj\Debug\Soloveyko_A_V_Geo_Service.csproj.GenerateResource.Cache

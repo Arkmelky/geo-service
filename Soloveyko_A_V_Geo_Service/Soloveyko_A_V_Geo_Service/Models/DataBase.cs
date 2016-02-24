@@ -15,7 +15,7 @@ namespace Soloveyko_A_V_Geo_Service.Models
         private static DataBase dataBase;
         private static object flag = new object();
 
-        private DataBase()
+        public DataBase()
             : base("GeoObjects_db")
         {
         
