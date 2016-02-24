@@ -5,13 +5,13 @@ namespace Soloveyko_A_V_Geo_Service.Migrations
     using System.Data.Entity.Migrations.Infrastructure;
     using System.Resources;
     
-    public sealed partial class Geo_1 : IMigrationMetadata
+    public sealed partial class Initial : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(Geo_1));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(Initial));
         
         string IMigrationMetadata.Id
         {
-            get { return "201602221845190_Geo_1"; }
+            get { return "201602240018428_Initial"; }
         }
         
         string IMigrationMetadata.Source

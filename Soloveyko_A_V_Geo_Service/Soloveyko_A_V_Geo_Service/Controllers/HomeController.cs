@@ -13,9 +13,8 @@ namespace Soloveyko_A_V_Geo_Service.Controllers
         {
             ViewBag.Message = "Modify this template to jump-start your ASP.NET MVC application.";
 
-            //var db = DataBase.GetDbContext();
-            //db.SaveChanges();
-            var repo = new DataBaseRepository<Address>(DataBase.GetDbContext());
+            var dbContext = DataBase.GetDbContext();
+            var repo = new DataBaseRepository<Address>(dbContext);
             var newAddress = new Address();
             newAddress.Country = "Belarus";
             newAddress.Region = "Minsk";
@@ -24,8 +23,10 @@ namespace Soloveyko_A_V_Geo_Service.Controllers
             newAddress.Building = "12/4";
 
             repo.Add(newAddress);
+            dbContext.SaveChanges();
 
-            ViewBag.address = newAddress;
+            ViewBag.Address = newAddress;
+            
             return View();
         }
 
@@ -40,6 +41,25 @@ namespace Soloveyko_A_V_Geo_Service.Controllers
         {
             ViewBag.Message = "Your contact page.";
 
+            return View();
+        }
+
+        public ActionResult AddToDb()
+        {
+            ViewBag.Message = "Your contact page.";
+            var dbContext = DataBase.GetDbContext();
+            var repo = new DataBaseRepository<Address>(dbContext);
+            var newAddress = new Address();
+            newAddress.Country = "Belarus";
+            newAddress.Region = "Minsk";
+            newAddress.City = "Minsk";
+            newAddress.Street = "Pl. Lenina";
+            newAddress.Building = "12/4";
+
+            repo.Add(newAddress);
+            dbContext.SaveChanges();
+
+            ViewBag.Address = newAddress;
             return View();
         }
     }

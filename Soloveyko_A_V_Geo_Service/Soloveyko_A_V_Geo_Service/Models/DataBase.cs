@@ -38,7 +38,7 @@ namespace Soloveyko_A_V_Geo_Service.Models
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            modelBuilder.Conventions.Remove<ManyToManyCascadeDeleteConvention>();
+            //modelBuilder.Conventions.Remove<ManyToManyCascadeDeleteConvention>();
         }
 
         //public DbSet<UserProfile> UserProfiles { get; set; }
