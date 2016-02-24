@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using Soloveyko_A_V_Geo_Service.Models;
@@ -13,20 +14,12 @@ namespace Soloveyko_A_V_Geo_Service.Controllers
         {
             ViewBag.Message = "Modify this template to jump-start your ASP.NET MVC application.";
 
-            var dbContext = DataBase.GetDbContext();
-            var repo = new DataBaseRepository<Address>(dbContext);
-            var newAddress = new Address();
-            newAddress.Country = "Belarus";
-            newAddress.Region = "Minsk";
-            newAddress.City = "Minsk";
-            newAddress.Street = "Pl. Lenina";
-            newAddress.Building = "12/4";
+            var db = DataBase.GetDbContext();
+            var context = new DataBaseRepository<Address>(db);
 
-            repo.Add(newAddress);
-            dbContext.SaveChanges();
+            var list = context.GetAll();
+            ViewBag.Address = list.First();
 
-            ViewBag.Address = newAddress;
-            
             return View();
         }
 
