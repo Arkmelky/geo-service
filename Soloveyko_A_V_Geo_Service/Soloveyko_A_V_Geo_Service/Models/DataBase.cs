@@ -56,6 +56,7 @@ namespace Soloveyko_A_V_Geo_Service.Models
 
         //Location obj
         public DbSet<Location> Locations { get; set; }
+        public DbSet<GeoObjectType> GeoObjectTypes { get; set; }
     }
 
     public class DataBaseRepository<TEntity> where TEntity : class

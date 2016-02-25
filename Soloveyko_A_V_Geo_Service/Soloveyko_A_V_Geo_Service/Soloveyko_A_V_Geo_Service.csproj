@@ -194,6 +194,10 @@
     <Compile Include="Migrations\201602242049461_Geo_1.Designer.cs">
       <DependentUpon>201602242049461_Geo_1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201602252040410_Geo_2.cs" />
+    <Compile Include="Migrations\201602252040410_Geo_2.Designer.cs">
+      <DependentUpon>201602252040410_Geo_2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountModels.cs" />
     <Compile Include="Models\AddressModels.cs" />
@@ -340,6 +344,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201602242049461_Geo_1.resx">
       <DependentUpon>201602242049461_Geo_1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201602252040410_Geo_2.resx">
+      <DependentUpon>201602252040410_Geo_2.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

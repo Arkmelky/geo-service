@@ -9,6 +9,7 @@ namespace Soloveyko_A_V_Geo_Service.Models
 {
     public class Address : IBaseDbObj
     {
+        [Key]
         public int AddressId { get; set; }
         public string Country { get; set; }
         public string Region { get; set; }
