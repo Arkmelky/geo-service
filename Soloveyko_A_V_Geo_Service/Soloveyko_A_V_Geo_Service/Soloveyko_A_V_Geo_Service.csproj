@@ -198,6 +198,10 @@
     <Compile Include="Migrations\201602252040410_Geo_2.Designer.cs">
       <DependentUpon>201602252040410_Geo_2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201602252305130_Geo_3.cs" />
+    <Compile Include="Migrations\201602252305130_Geo_3.Designer.cs">
+      <DependentUpon>201602252305130_Geo_3.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountModels.cs" />
     <Compile Include="Models\AddressModels.cs" />
@@ -324,16 +328,16 @@
     <Content Include="Views\Address\Create.cshtml" />
     <Content Include="Views\Address\Edit.cshtml" />
     <Content Include="Views\Address\Delete.cshtml" />
-    <Content Include="Views\GeoObject\Index.cshtml" />
-    <Content Include="Views\GeoObject\Details.cshtml" />
-    <Content Include="Views\GeoObject\Create.cshtml" />
-    <Content Include="Views\GeoObject\Edit.cshtml" />
-    <Content Include="Views\GeoObject\Delete.cshtml" />
     <Content Include="Views\Location\Index.cshtml" />
     <Content Include="Views\Location\Details.cshtml" />
     <Content Include="Views\Location\Create.cshtml" />
     <Content Include="Views\Location\Edit.cshtml" />
     <Content Include="Views\Location\Delete.cshtml" />
+    <Content Include="Views\GeoObject\Index.cshtml" />
+    <Content Include="Views\GeoObject\Details.cshtml" />
+    <Content Include="Views\GeoObject\Create.cshtml" />
+    <Content Include="Views\GeoObject\Edit.cshtml" />
+    <Content Include="Views\GeoObject\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -347,6 +351,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201602252040410_Geo_2.resx">
       <DependentUpon>201602252040410_Geo_2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201602252305130_Geo_3.resx">
+      <DependentUpon>201602252305130_Geo_3.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

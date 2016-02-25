@@ -18,7 +18,7 @@ namespace Soloveyko_A_V_Geo_Service.Controllers
 
         public ActionResult Index()
         {
-            var geoobjects = db.GeoObjects.Include(g => g.Location).Include(g => g.Address);
+            var geoobjects = db.GeoObjects.Include(g => g.Location).Include(g => g.Address).Include(g => g.GeoObjectType);
             return View(geoobjects.ToList());
         }
 
@@ -42,6 +42,7 @@ namespace Soloveyko_A_V_Geo_Service.Controllers
         {
             ViewBag.GeoObjectId = new SelectList(db.Locations, "GeoObjectId", "GeoObjectId");
             ViewBag.AddressId = new SelectList(db.Addresses, "AddressId", "Country");
+            ViewBag.GeoObjectTypeId = new SelectList(db.GeoObjectTypes, "GeoObjectTypeId", "GeoObjectTypeName");
             return View();
         }
 
@@ -61,6 +62,7 @@ namespace Soloveyko_A_V_Geo_Service.Controllers
 
             ViewBag.GeoObjectId = new SelectList(db.Locations, "GeoObjectId", "GeoObjectId", geoobject.GeoObjectId);
             ViewBag.AddressId = new SelectList(db.Addresses, "AddressId", "Country", geoobject.AddressId);
+            ViewBag.GeoObjectTypeId = new SelectList(db.GeoObjectTypes, "GeoObjectTypeId", "GeoObjectTypeName", geoobject.GeoObjectTypeId);
             return View(geoobject);
         }
 
@@ -76,6 +78,7 @@ namespace Soloveyko_A_V_Geo_Service.Controllers
             }
             ViewBag.GeoObjectId = new SelectList(db.Locations, "GeoObjectId", "GeoObjectId", geoobject.GeoObjectId);
             ViewBag.AddressId = new SelectList(db.Addresses, "AddressId", "Country", geoobject.AddressId);
+            ViewBag.GeoObjectTypeId = new SelectList(db.GeoObjectTypes, "GeoObjectTypeId", "GeoObjectTypeName", geoobject.GeoObjectTypeId);
             return View(geoobject);
         }
 
@@ -94,6 +97,7 @@ namespace Soloveyko_A_V_Geo_Service.Controllers
             }
             ViewBag.GeoObjectId = new SelectList(db.Locations, "GeoObjectId", "GeoObjectId", geoobject.GeoObjectId);
             ViewBag.AddressId = new SelectList(db.Addresses, "AddressId", "Country", geoobject.AddressId);
+            ViewBag.GeoObjectTypeId = new SelectList(db.GeoObjectTypes, "GeoObjectTypeId", "GeoObjectTypeName", geoobject.GeoObjectTypeId);
             return View(geoobject);
         }
 

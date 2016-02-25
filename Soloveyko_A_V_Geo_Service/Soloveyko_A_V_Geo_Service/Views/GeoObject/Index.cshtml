@@ -18,10 +18,10 @@
             @Html.DisplayNameFor(model => model.Description)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.GeoObjectType)
+            @Html.DisplayNameFor(model => model.Address.Country)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Address.Country)
+            @Html.DisplayNameFor(model => model.GeoObjectType.GeoObjectTypeName)
         </th>
         <th></th>
     </tr>
@@ -35,10 +35,10 @@
             @Html.DisplayFor(modelItem => item.Description)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.GeoObjectType)
+            @Html.DisplayFor(modelItem => item.Address.Country)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Address.Country)
+            @Html.DisplayFor(modelItem => item.GeoObjectType.GeoObjectTypeName)
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.GeoObjectId }) |

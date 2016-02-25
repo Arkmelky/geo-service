@@ -30,19 +30,19 @@
         </div>
 
         <div class="editor-label">
-            @Html.LabelFor(model => model.GeoObjectType)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.GeoObjectType)
-            @Html.ValidationMessageFor(model => model.GeoObjectType)
-        </div>
-
-        <div class="editor-label">
             @Html.LabelFor(model => model.AddressId, "Address")
         </div>
         <div class="editor-field">
             @Html.DropDownList("AddressId", String.Empty)
             @Html.ValidationMessageFor(model => model.AddressId)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.GeoObjectTypeId, "GeoObjectType")
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("GeoObjectTypeId", String.Empty)
+            @Html.ValidationMessageFor(model => model.GeoObjectTypeId)
         </div>
 
         <p>
