@@ -1,0 +1,43 @@
+﻿@model Soloveyko_A_V_Geo_Service.Models.GeoObject
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>GeoObject</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Name)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Name)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Description)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Description)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.GeoObjectType)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.GeoObjectType)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Address.Country)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Address.Country)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.GeoObjectId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
