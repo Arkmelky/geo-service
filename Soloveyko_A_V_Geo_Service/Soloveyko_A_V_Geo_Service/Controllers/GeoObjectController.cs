@@ -41,7 +41,7 @@ namespace Soloveyko_A_V_Geo_Service.Controllers
         public ActionResult Create()
         {
             ViewBag.GeoObjectId = new SelectList(db.Locations, "GeoObjectId", "GeoObjectId");
-            ViewBag.AddressId = new SelectList(db.Addresses, "AddressId", "Country");
+            ViewBag.AddressId = db.Addresses.ToList();
             ViewBag.GeoObjectTypeId = new SelectList(db.GeoObjectTypes, "GeoObjectTypeId", "GeoObjectTypeName");
             return View();
         }

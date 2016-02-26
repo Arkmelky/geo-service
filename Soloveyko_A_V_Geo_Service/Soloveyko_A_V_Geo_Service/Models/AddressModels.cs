@@ -23,6 +23,11 @@ namespace Soloveyko_A_V_Geo_Service.Models
         {
             return AddressId;
         }
+
+        public override string ToString()
+        {
+            return Country +" | "+ Region + " | " + City +" | "+Street+" | "+Building;
+        }
     }
     /*public class Country : IBaseDbObj
     {
