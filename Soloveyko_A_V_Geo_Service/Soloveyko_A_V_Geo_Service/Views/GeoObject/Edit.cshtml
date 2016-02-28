@@ -1,4 +1,5 @@
-﻿@model Soloveyko_A_V_Geo_Service.Models.GeoObject
+﻿@using Soloveyko_A_V_Geo_Service.Models
+@model Soloveyko_A_V_Geo_Service.Models.GeoObject
 
 @{
     ViewBag.Title = "Edit";
@@ -36,7 +37,13 @@
             @Html.LabelFor(model => model.AddressId, "Address")
         </div>
         <div class="editor-field">
-            @Html.DropDownList("AddressId", String.Empty)
+            <select id="AddressId" name="AddressId" class="valid">
+                <option value=""></option>
+                @foreach (var adrs in (List<Address>)ViewBag.AddressId)
+                {
+                    <option value="@adrs.AddressId">@adrs.ToString()</option>
+                }
+            </select>
             @Html.ValidationMessageFor(model => model.AddressId)
         </div>
 

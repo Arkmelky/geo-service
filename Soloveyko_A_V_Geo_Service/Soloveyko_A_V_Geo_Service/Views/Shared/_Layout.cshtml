@@ -7,6 +7,8 @@
         <meta name="viewport" content="width=device-width" />
         @Styles.Render("~/Content/css")
         @Scripts.Render("~/bundles/modernizr")
+        @Scripts.Render("~/bundles/jquery")
+        @RenderSection("scripts", required: false)
     </head>
     <body>
         <header>
@@ -15,15 +17,12 @@
                     <p class="site-title">@Html.ActionLink("your logo here", "Index", "Home")</p>
                 </div>
                 <div class="float-right">
-                    <section id="login">
-                        @Html.Partial("_LoginPartial")
-                    </section>
                     <nav>
                         <ul id="menu">
                             <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                            <li>@Html.ActionLink("GeoObject", "Index", "GeoObject")</li>
-                            <li>@Html.ActionLink("Address", "Index", "Address")</li>
-                            <li>@Html.ActionLink("Location", "Index", "Location")</li>
+                            <li>@Html.ActionLink("Объекты", "Index", "GeoObject")</li>
+                            <li>@Html.ActionLink("Адреса", "Index", "Address")</li>
+                            <li>@Html.ActionLink("Координаты", "Index", "Location")</li>
                         </ul>
                     </nav>
                 </div>
@@ -45,5 +44,6 @@
 
         @Scripts.Render("~/bundles/jquery")
         @RenderSection("scripts", required: false)
+
     </body>
 </html>

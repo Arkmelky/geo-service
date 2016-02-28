@@ -61,7 +61,7 @@ namespace Soloveyko_A_V_Geo_Service.Controllers
             }
 
             ViewBag.GeoObjectId = new SelectList(db.Locations, "GeoObjectId", "GeoObjectId", geoobject.GeoObjectId);
-            ViewBag.AddressId = new SelectList(db.Addresses, "AddressId", "Country", geoobject.AddressId);
+            ViewBag.AddressId = db.Addresses.ToList();
             ViewBag.GeoObjectTypeId = new SelectList(db.GeoObjectTypes, "GeoObjectTypeId", "GeoObjectTypeName", geoobject.GeoObjectTypeId);
             return View(geoobject);
         }
@@ -77,7 +77,7 @@ namespace Soloveyko_A_V_Geo_Service.Controllers
                 return HttpNotFound();
             }
             ViewBag.GeoObjectId = new SelectList(db.Locations, "GeoObjectId", "GeoObjectId", geoobject.GeoObjectId);
-            ViewBag.AddressId = new SelectList(db.Addresses, "AddressId", "Country", geoobject.AddressId);
+            ViewBag.AddressId = db.Addresses.ToList();
             ViewBag.GeoObjectTypeId = new SelectList(db.GeoObjectTypes, "GeoObjectTypeId", "GeoObjectTypeName", geoobject.GeoObjectTypeId);
             ViewBag.Id = id;
             return View(geoobject);
@@ -97,7 +97,7 @@ namespace Soloveyko_A_V_Geo_Service.Controllers
                 return RedirectToAction("Index");
             }
             ViewBag.GeoObjectId = new SelectList(db.Locations, "GeoObjectId", "GeoObjectId", geoobject.GeoObjectId);
-            ViewBag.AddressId = new SelectList(db.Addresses, "AddressId", "Country", geoobject.AddressId);
+            ViewBag.AddressId = db.Addresses.ToList();
             ViewBag.GeoObjectTypeId = new SelectList(db.GeoObjectTypes, "GeoObjectTypeId", "GeoObjectTypeName", geoobject.GeoObjectTypeId);
             return View(geoobject);
         }
