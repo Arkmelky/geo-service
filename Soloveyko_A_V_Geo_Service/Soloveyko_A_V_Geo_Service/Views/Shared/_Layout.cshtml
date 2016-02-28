@@ -8,18 +8,18 @@
         @Styles.Render("~/Content/css")
         @Scripts.Render("~/bundles/modernizr")
         @Scripts.Render("~/bundles/jquery")
-        @RenderSection("scripts", required: false)
+        
     </head>
     <body>
         <header>
             <div class="content-wrapper">
                 <div class="float-left">
-                    <p class="site-title">@Html.ActionLink("your logo here", "Index", "Home")</p>
+                    <p class="site-title">@Html.ActionLink("Гео-сервис(каталог) компаний и общественных объектов РБ", "Index", "Home")</p>
                 </div>
                 <div class="float-right">
                     <nav>
                         <ul id="menu">
-                            <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                            <li>@Html.ActionLink("Карта", "Index", "Home")</li>
                             <li>@Html.ActionLink("Объекты", "Index", "GeoObject")</li>
                             <li>@Html.ActionLink("Адреса", "Index", "Address")</li>
                             <li>@Html.ActionLink("Координаты", "Index", "Location")</li>

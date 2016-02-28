@@ -23,11 +23,11 @@
         <th>
             @Html.DisplayNameFor(model => model.GeoObjectType.GeoObjectTypeName)
         </th>
-        <th></th>
+        <th style="    width: 170px;"></th>
     </tr>
 
 @foreach (var item in Model) {
-    <tr>
+    <tr >
         <td>
             @Html.DisplayFor(modelItem => item.Name)
         </td>
@@ -46,6 +46,7 @@
             @Html.ActionLink("Delete", "Delete", new { id=item.GeoObjectId })
         </td>
     </tr>
+    <tr style="height:15px;"></tr>
 }
 
 </table>

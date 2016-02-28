@@ -11,49 +11,92 @@
                     width: 500px;
                     height: 400px;
                     background: black;
-                    
+
                 }
                 #AddressId {
-                    float: right;
+                    height: 35px;
                 }
             </style>
-            <div id="map" class="map col-xs-6"></div>
-            <div>
-                <select id="AddressId" name="AddressId col-xs-6" class="valid">
-                    <option value=""></option>
-                    @foreach (var viewGeoObj in (List<ViewGeoObj>)ViewBag.listOfViewGeoObjects)
-                    {
-                        <option value="" lt="@viewGeoObj.Latitude" lg ="@viewGeoObj.Longitude">@viewGeoObj.Name</option>
-                    }
-                </select>
-            </div>
+            
+            <div id="map" class="map"></div>
+            
             <script src="https://maps.googleapis.com/maps/api/js"async defer></script>
             <script>
+                var map;
+                var mapDiv = document.getElementById('map');
+
                 function initMap() {
-                    var mapDiv = document.getElementById('map');
-                    var map = new google.maps.Map(mapDiv, {
-                        center: { lat: 44.540, lng: -78.546 },
-                        zoom: 8
+
+                    map = new google.maps.Map(mapDiv, {
+                        center: { lat: 53.8929728, lng: 27.5152776 },
+                        zoom: 7
                     });
+                }
+
+                function reloadMap(lt, lg, name, desc) {
+
+                    console.log(lt + " | " + lg + " | " + name + " | " + desc);
+                    var center = new google.maps.LatLng(lt, lg);
+                    var options = {
+                        zoom: 15,
+                        center: center
+                    };
+
+                    map = new google.maps.Map(mapDiv, options);
+
+                    var infowindow = new google.maps.InfoWindow({
+                        content: desc
+                    });
+
+                    var marker = new google.maps.Marker({
+                        position: center,
+                        title: name,
+
+                    });
+                    marker.addListener('click', function() {
+                        infowindow.open(map,marker);
+                    });
+
+                    marker.setMap(map);
                 }
             </script>
             <script src="https://maps.googleapis.com/maps/api/js?callback=initMap"async defer></script>
-            
-            <script>
-                $(document).ready(function() {
-                    var comboBox = document.getElementById("AddressId");
-                    comboBox.onchange = function() { SetSel(this); }
-
-                    function SetSel(elem) {
-
-                    }
-
-                });
-            </script>
         </div>
     </section>
 }
 
-<ol class="round">
-    
-</ol>
+<div class="round">
+    <div class="">
+        <p>Выберите объект</p>
+        <select id="AddressId" name="AddressId" class="valid">
+            <option value=""></option>
+            @foreach (var viewGeoObj in (List<ViewGeoObj>)ViewBag.listOfViewGeoObjects)
+            {
+                <option desc="@viewGeoObj.Description" full-adrs="@viewGeoObj.FullAddress" lt="@viewGeoObj.Latitude" lg ="@viewGeoObj.Longitude">@viewGeoObj.Name</option>
+            }
+        </select>
+        <button id="findOnMap">Найти</button>
+        <script>
+            $(document).ready(function () {
+                var buttonFind = $("#findOnMap");
+                buttonFind.click(function() {
+                    var selectedOption = $("#AddressId").find(":selected");
+
+                    var lt = parseFloat(selectedOption.attr("lt"));
+                    var lg = parseFloat(selectedOption.attr("lg"));
+                    var name = selectedOption.text();
+                    var adrs = selectedOption.attr("full-adrs");
+                    var desc = selectedOption.attr("desc");
+                    desc += "<br>" + adrs;
+
+                    console.log(lt);
+                    console.log(lg);
+                    console.log(name);
+                    console.log(desc);
+
+                    reloadMap(lt,lg,name,desc);
+                });
+            });
+        </script>
+    </div>
+</div>

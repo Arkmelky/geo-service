@@ -81,13 +81,13 @@ G:\OOP\Kursovoy\Soloveyko_A_V_Geo_Service\Soloveyko_A_V_Geo_Service\bin\ru\Syste
 G:\OOP\Kursovoy\Soloveyko_A_V_Geo_Service\Soloveyko_A_V_Geo_Service\bin\zh-Hans\System.Spatial.resources.dll
 G:\OOP\Kursovoy\Soloveyko_A_V_Geo_Service\Soloveyko_A_V_Geo_Service\bin\zh-Hant\System.Spatial.resources.dll
 G:\OOP\Kursovoy\Soloveyko_A_V_Geo_Service\Soloveyko_A_V_Geo_Service\obj\Debug\Soloveyko_A_V_Geo_Service.csprojResolveAssemblyReference.cache
-G:\OOP\Kursovoy\Soloveyko_A_V_Geo_Service\Soloveyko_A_V_Geo_Service\obj\Debug\Soloveyko_A_V_Geo_Service.dll
-G:\OOP\Kursovoy\Soloveyko_A_V_Geo_Service\Soloveyko_A_V_Geo_Service\obj\Debug\Soloveyko_A_V_Geo_Service.pdb
 G:\OOP\Kursovoy\Soloveyko_A_V_Geo_Service\Soloveyko_A_V_Geo_Service\obj\Debug\Soloveyko_A_V_Geo_Service.Migrations.Geo_1.resources
-G:\OOP\Kursovoy\Soloveyko_A_V_Geo_Service\Soloveyko_A_V_Geo_Service\obj\Debug\Soloveyko_A_V_Geo_Service.csproj.GenerateResource.Cache
 G:\OOP\Kursovoy\Soloveyko_A_V_Geo_Service\Soloveyko_A_V_Geo_Service\obj\Debug\Soloveyko_A_V_Geo_Service.Migrations.Geo_2.resources
 G:\OOP\Kursovoy\Soloveyko_A_V_Geo_Service\Soloveyko_A_V_Geo_Service\obj\Debug\Soloveyko_A_V_Geo_Service.Migrations.Geo_3.resources
 G:\OOP\Kursovoy\Soloveyko_A_V_Geo_Service\Soloveyko_A_V_Geo_Service\obj\Debug\Soloveyko_A_V_Geo_Service.Migrations.Geo_4.resources
 G:\OOP\Kursovoy\Soloveyko_A_V_Geo_Service\Soloveyko_A_V_Geo_Service\obj\Debug\Soloveyko_A_V_Geo_Service.Migrations.Geo_5.resources
 G:\OOP\Kursovoy\Soloveyko_A_V_Geo_Service\Soloveyko_A_V_Geo_Service\obj\Debug\Soloveyko_A_V_Geo_Service.Migrations.Geo_6.resources
 G:\OOP\Kursovoy\Soloveyko_A_V_Geo_Service\Soloveyko_A_V_Geo_Service\obj\Debug\Soloveyko_A_V_Geo_Service.Migrations.Geo_7.resources
+G:\OOP\Kursovoy\Soloveyko_A_V_Geo_Service\Soloveyko_A_V_Geo_Service\obj\Debug\Soloveyko_A_V_Geo_Service.csproj.GenerateResource.Cache
+G:\OOP\Kursovoy\Soloveyko_A_V_Geo_Service\Soloveyko_A_V_Geo_Service\obj\Debug\Soloveyko_A_V_Geo_Service.dll
+G:\OOP\Kursovoy\Soloveyko_A_V_Geo_Service\Soloveyko_A_V_Geo_Service\obj\Debug\Soloveyko_A_V_Geo_Service.pdb
