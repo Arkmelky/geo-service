@@ -11,31 +11,49 @@
                     width: 500px;
                     height: 400px;
                     background: black;
+                    
+                }
+                #AddressId {
+                    float: right;
                 }
             </style>
-            <div id="map" class="map"></div>
+            <div id="map" class="map col-xs-6"></div>
+            <div>
+                <select id="AddressId" name="AddressId col-xs-6" class="valid">
+                    <option value=""></option>
+                    @foreach (var viewGeoObj in (List<ViewGeoObj>)ViewBag.listOfViewGeoObjects)
+                    {
+                        <option value="" lt="@viewGeoObj.Latitude" lg ="@viewGeoObj.Longitude">@viewGeoObj.Name</option>
+                    }
+                </select>
+            </div>
             <script src="https://maps.googleapis.com/maps/api/js"async defer></script>
             <script>
                 function initMap() {
                     var mapDiv = document.getElementById('map');
                     var map = new google.maps.Map(mapDiv, {
                         center: { lat: 44.540, lng: -78.546 },
-                        zoom:8
+                        zoom: 8
                     });
                 }
             </script>
-            <script src="https://maps.googleapis.com/maps/api/js?callback=initMap"
-        async defer></script>
+            <script src="https://maps.googleapis.com/maps/api/js?callback=initMap"async defer></script>
+            
+            <script>
+                $(document).ready(function() {
+                    var comboBox = document.getElementById("AddressId");
+                    comboBox.onchange = function() { SetSel(this); }
+
+                    function SetSel(elem) {
+
+                    }
+
+                });
+            </script>
         </div>
     </section>
 }
-<h3>We suggest the following:</h3>
+
 <ol class="round">
-    <select id="AddressId" name="AddressId" class="valid">
-        <option value=""></option>
-        @foreach (var viewGeoObj in (List<ViewGeoObj>)ViewBag.listOfViewGeoObjects)
-        {
-            <option value="" lt="@viewGeoObj.Latitude" lg ="@viewGeoObj.Longitude">@viewGeoObj.Name</option>
-        }
-    </select>
+    
 </ol>
