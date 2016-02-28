@@ -11,10 +11,29 @@ namespace Soloveyko_A_V_Geo_Service.Models
     {
         [Key]
         public int AddressId { get; set; }
+
+        [Display(Name = "Город")]
+        [Required (ErrorMessage = "Введите название города")]
+        [StringLength(50, MinimumLength = 3, ErrorMessage = "Длина строки должна быть от 3 до 50 символов")]
         public string Country { get; set; }
+
+        [Display(Name = "Область")]
+        [Required (ErrorMessage = "Введите название области")]
+        [StringLength(50, MinimumLength = 3, ErrorMessage = "Длина строки должна быть от 3 до 50 символов")]
         public string Region { get; set; }
+
+        [Display(Name = "Город")]
+        [Required (ErrorMessage = "Введите название города")]
+        [StringLength(50, MinimumLength = 3, ErrorMessage = "Длина строки должна быть от 3 до 50 символов")]
         public string City { get; set; }
+
+        [Display(Name = "Улица")]
+        [Required(ErrorMessage = "Введите название улицы")]
+        [StringLength(50, MinimumLength = 3, ErrorMessage = "Длина строки должна быть от 3 до 50 символов")]
         public string Street { get; set; }
+
+        [Display(Name = "Здание или Объект")]
+        [Required(ErrorMessage = "Введите номер здания или название объекта")]
         public string Building { get; set; }
 
         public virtual List<GeoObject> GeoObjects { get; set; }

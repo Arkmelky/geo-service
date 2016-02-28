@@ -2,6 +2,7 @@
 
 @{
     ViewBag.Title = "Edit";
+    var GeoObjectId = Model.GeoObjectId;
 }
 
 <h2>Edit</h2>
@@ -46,11 +47,14 @@
             @Html.DropDownList("GeoObjectTypeId", String.Empty)
             @Html.ValidationMessageFor(model => model.GeoObjectTypeId)
         </div>
-
         <p>
             <input type="submit" value="Save" />
         </p>
     </fieldset>
+    <p>
+            @Html.ActionLink("Add Location","Create","Location",new {id = GeoObjectId},null)
+            
+        </p>
 }
 
 <div>

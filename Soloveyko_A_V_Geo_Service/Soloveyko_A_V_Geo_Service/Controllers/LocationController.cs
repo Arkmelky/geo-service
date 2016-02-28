@@ -6,6 +6,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using Soloveyko_A_V_Geo_Service.Models;
+using Soloveyko_A_V_Geo_Service.ViewModels;
 
 namespace Soloveyko_A_V_Geo_Service.Controllers
 {
@@ -19,7 +20,12 @@ namespace Soloveyko_A_V_Geo_Service.Controllers
         public ActionResult Index()
         {
             var locations = db.Locations.Include(l => l.GeoObject);
-            return View(locations.ToList());
+            var locationsViewList = new List<LocationView>();
+            foreach (var location in locations)
+            {
+                locationsViewList.Add(new LocationView(location));
+            }
+            return View(locationsViewList.ToList());
         }
 
         //
@@ -38,10 +44,18 @@ namespace Soloveyko_A_V_Geo_Service.Controllers
         //
         // GET: /Location/Create
 
-        public ActionResult Create()
+        public ActionResult Create(int id =0)
         {
-            ViewBag.GeoObjectId = new SelectList(db.GeoObjects, "GeoObjectId", "Name");
-            return View();
+            Location location = db.Locations.Find(id);
+            if (location == null)
+            {
+                var model = new Location();
+                model.GeoObjectId = id;
+                return View(model);
+            }
+
+            return RedirectToAction("Edit",new {id = id});
+            
         }
 
         //

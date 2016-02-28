@@ -12,6 +12,8 @@
 
     <fieldset>
         <legend>Location</legend>
+        
+        @Html.HiddenFor(model => model.GeoObjectId)
 
         <div class="editor-label">
             @Html.LabelFor(model => model.Latitude)

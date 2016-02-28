@@ -202,6 +202,22 @@
     <Compile Include="Migrations\201602252305130_Geo_3.Designer.cs">
       <DependentUpon>201602252305130_Geo_3.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201602281130474_Geo_4.cs" />
+    <Compile Include="Migrations\201602281130474_Geo_4.Designer.cs">
+      <DependentUpon>201602281130474_Geo_4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201602281140130_Geo_5.cs" />
+    <Compile Include="Migrations\201602281140130_Geo_5.Designer.cs">
+      <DependentUpon>201602281140130_Geo_5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201602281333405_Geo_6.cs" />
+    <Compile Include="Migrations\201602281333405_Geo_6.Designer.cs">
+      <DependentUpon>201602281333405_Geo_6.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201602281340267_Geo_7.cs" />
+    <Compile Include="Migrations\201602281340267_Geo_7.Designer.cs">
+      <DependentUpon>201602281340267_Geo_7.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountModels.cs" />
     <Compile Include="Models\AddressModels.cs" />
@@ -211,6 +227,7 @@
     <Compile Include="Models\GeoObjectTypes.cs" />
     <Compile Include="Models\LocationModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModels\LocationView.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
@@ -354,6 +371,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201602252305130_Geo_3.resx">
       <DependentUpon>201602252305130_Geo_3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201602281130474_Geo_4.resx">
+      <DependentUpon>201602281130474_Geo_4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201602281140130_Geo_5.resx">
+      <DependentUpon>201602281140130_Geo_5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201602281333405_Geo_6.resx">
+      <DependentUpon>201602281333405_Geo_6.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201602281340267_Geo_7.resx">
+      <DependentUpon>201602281340267_Geo_7.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

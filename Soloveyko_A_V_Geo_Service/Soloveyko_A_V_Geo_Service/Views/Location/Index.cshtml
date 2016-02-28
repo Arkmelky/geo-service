@@ -1,4 +1,4 @@
-﻿@model IEnumerable<Soloveyko_A_V_Geo_Service.Models.Location>
+﻿@model IEnumerable<Soloveyko_A_V_Geo_Service.ViewModels.LocationView>
 
 @{
     ViewBag.Title = "Index";
@@ -12,22 +12,30 @@
 <table>
     <tr>
         <th>
+            @Html.DisplayNameFor(model => model.GeoObjectName)
+        </th>
+        <th>
             @Html.DisplayNameFor(model => model.Latitude)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.Longitude)
         </th>
+        
         <th></th>
     </tr>
 
 @foreach (var item in Model) {
     <tr>
         <td>
+            @Html.DisplayFor(modelItem => item.GeoObjectName)
+        </td>
+        <td>
             @Html.DisplayFor(modelItem => item.Latitude)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.Longitude)
         </td>
+        
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.GeoObjectId }) |
             @Html.ActionLink("Details", "Details", new { id=item.GeoObjectId }) |

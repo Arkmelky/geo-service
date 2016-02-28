@@ -11,7 +11,12 @@ namespace Soloveyko_A_V_Geo_Service.Models
     {
         [Key]
         public int GeoObjectId { get; set; }
+        [Display(Name = "Название")]
+        [Required(ErrorMessage = "Введите название Объекта")]
+        [StringLength(50, MinimumLength = 3, ErrorMessage = "Длина строки должна быть от 3 до 50 символов")]
         public string Name { get; set; }
+        [Display(Name = "Описание")]
+        [Required(ErrorMessage = "Введите название Объекта")]
         public string Description { get; set; }
         
         public virtual Location Location { get; set; }
@@ -26,12 +31,19 @@ namespace Soloveyko_A_V_Geo_Service.Models
         {
             return GeoObjectId;
         }
+
+        public override string ToString()
+        {
+            return Name;
+        }
     }
 
     public class GeoObjectType
     {
         [Key]
         public int GeoObjectTypeId { get; set; }
+        [Display(Name = "Тип Объекта")]
+        [Required(ErrorMessage = "Введите название типа")]
         public string GeoObjectTypeName { get; set; }
 
         
