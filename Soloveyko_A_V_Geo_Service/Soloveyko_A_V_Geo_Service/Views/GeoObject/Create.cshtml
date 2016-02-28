@@ -5,7 +5,7 @@
     ViewBag.Title = "Create";
 }
 
-<h2>Create</h2>
+<h2>Новый объект</h2>
 
 @using (Html.BeginForm()) {
     @Html.AntiForgeryToken()
@@ -31,7 +31,7 @@
         </div>
 
         <div class="editor-label">
-            @Html.LabelFor(model => model.AddressId, "Address")
+            @Html.LabelFor(model => model.AddressId)
         </div>
         <div class="editor-field">
             <select id="AddressId" name="AddressId" class="valid">
@@ -46,7 +46,7 @@
         </div>
 
         <div class="editor-label">
-            @Html.LabelFor(model => model.GeoObjectTypeId, "GeoObjectType")
+            @Html.LabelFor(model => model.GeoObjectTypeId)
         </div>
         <div class="editor-field">
             @Html.DropDownList("GeoObjectTypeId", String.Empty)
@@ -54,13 +54,13 @@
         </div>
 
         <p>
-            <input type="submit" value="Create" />
+            <input type="submit" value="Добавить" />
         </p>
     </fieldset>
 }
 
 <div>
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Назад", "Index")
 </div>
 
 @section Scripts {

@@ -21,9 +21,11 @@ namespace Soloveyko_A_V_Geo_Service.Models
         
         public virtual Location Location { get; set; }
 
+        [Display(Name = "Адрес")]
         public int? AddressId { get; set; }
         public virtual Address Address { get; set; }
 
+        [Display(Name = "Тип Объекта")]
         public int? GeoObjectTypeId { get; set; }
         public virtual GeoObjectType GeoObjectType { get; set; }
 

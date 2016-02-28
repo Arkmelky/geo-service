@@ -4,11 +4,8 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
-
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
+<h2>Список координат</h2>
+<p>Координаты добавляютя через ссылку "Править" конкретного гео-объекта.</p>
 <table>
     <tr>
         <th>
@@ -37,9 +34,9 @@
         </td>
         
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.GeoObjectId }) |
-            @Html.ActionLink("Details", "Details", new { id=item.GeoObjectId }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.GeoObjectId })
+            @Html.ActionLink("Править", "Edit", new { id=item.GeoObjectId }) |
+            @Html.ActionLink("Просмотреть", "Details", new { id=item.GeoObjectId }) |
+            @Html.ActionLink("Удалить", "Delete", new { id=item.GeoObjectId })
         </td>
     </tr>
 }

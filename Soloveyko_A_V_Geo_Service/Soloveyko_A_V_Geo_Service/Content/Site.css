@@ -75,6 +75,7 @@ h2 {
 
 h3 {
     font-size: 1.2em;
+    margin-bottom: 10px;
 }
 
 h4 {
@@ -753,4 +754,10 @@ tr.pager td {
         footer p {
             margin: 0;
         }
+}
+.display-label {
+    font-weight: bold;
+}
+.display-field {
+    margin-bottom: 15px;
 }

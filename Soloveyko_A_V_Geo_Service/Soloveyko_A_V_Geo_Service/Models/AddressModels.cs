@@ -12,7 +12,7 @@ namespace Soloveyko_A_V_Geo_Service.Models
         [Key]
         public int AddressId { get; set; }
 
-        [Display(Name = "Город")]
+        [Display(Name = "Страна")]
         [Required (ErrorMessage = "Введите название города")]
         [StringLength(50, MinimumLength = 3, ErrorMessage = "Длина строки должна быть от 3 до 50 символов")]
         public string Country { get; set; }

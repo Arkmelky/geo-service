@@ -6,7 +6,7 @@
     var GeoObjectId = Model.GeoObjectId;
 }
 
-<h2>Edit</h2>
+<h2>Правка</h2>
 
 @using (Html.BeginForm()) {
     @Html.AntiForgeryToken()
@@ -34,7 +34,7 @@
         </div>
 
         <div class="editor-label">
-            @Html.LabelFor(model => model.AddressId, "Address")
+            @Html.LabelFor(model => model.AddressId)
         </div>
         <div class="editor-field">
             <select id="AddressId" name="AddressId" class="valid">
@@ -48,24 +48,24 @@
         </div>
 
         <div class="editor-label">
-            @Html.LabelFor(model => model.GeoObjectTypeId, "GeoObjectType")
+            @Html.LabelFor(model => model.GeoObjectTypeId)
         </div>
         <div class="editor-field">
             @Html.DropDownList("GeoObjectTypeId", String.Empty)
             @Html.ValidationMessageFor(model => model.GeoObjectTypeId)
         </div>
         <p>
-            <input type="submit" value="Save" />
+            <input type="submit" value="Сохранить" />
         </p>
     </fieldset>
     <p>
-            @Html.ActionLink("Add Location","Create","Location",new {id = GeoObjectId},null)
+            @Html.ActionLink("Координаты Объекта","Create","Location",new {id = GeoObjectId},null)
             
         </p>
 }
 
 <div>
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Назад", "Index")
 </div>
 
 @section Scripts {
