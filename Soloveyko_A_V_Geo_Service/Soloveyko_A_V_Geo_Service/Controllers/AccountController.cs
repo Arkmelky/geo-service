@@ -35,8 +35,15 @@ namespace Soloveyko_A_V_Geo_Service.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Login(LoginModel model, string returnUrl)
         {
-            if (ModelState.IsValid && WebSecurity.Login(model.UserName, model.Password, persistCookie: model.RememberMe))
+            /*if (ModelState.IsValid && WebSecurity.Login(model.UserName, model.Password, persistCookie: model.RememberMe))
             {
+                return RedirectToLocal(returnUrl);
+            }*/
+
+            bool result = FormsAuthentication.Authenticate(model.UserName, model.Password);
+            if (result && ModelState.IsValid)
+            {
+                FormsAuthentication.SetAuthCookie(model.UserName, false);
                 return RedirectToLocal(returnUrl);
             }
 

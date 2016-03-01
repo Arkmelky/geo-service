@@ -10,6 +10,7 @@ using Soloveyko_A_V_Geo_Service.ViewModels;
 
 namespace Soloveyko_A_V_Geo_Service.Controllers
 {
+    [Authorize]
     public class LocationController : Controller
     {
         private DataBase db = new DataBase();
